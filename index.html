@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="es" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casuarinas | Gestión y Producción de Canales YouTube</title>
+<meta name="description" content="Casuarinas — Estrategia, gestión y producción de canales YouTube. Diagnóstico, crecimiento y producción de video para creadores y marcas en LatAm.">
+<link rel="canonical" href="https://casuarinasconsulting.com/">
+
+<!-- Favicon (SVG inline: chevron ascendente = crecimiento) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23111722'/%3E%3Cpath%20d='M9%2021%20L16%2011%20L23%2021'%20stroke='%233b82f6'%20stroke-width='2.5'%20fill='none'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Casuarinas | Gestión y Producción de Canales YouTube">
+<meta property="og:description" content="Gestionamos canales de YouTube desde adentro — algoritmo, producción, equipo. Sabemos lo que funciona porque lo hacemos todos los días.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://casuarinasconsulting.com/">
+<meta property="og:locale" content="es_AR">
+<meta property="og:image" content="https://casuarinasconsulting.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Casuarinas — Gestión y producción de canales YouTube">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Casuarinas | Gestión y Producción de Canales YouTube">
+<meta name="twitter:description" content="Gestionamos canales de YouTube desde adentro — algoritmo, producción, equipo.">
+<meta name="twitter:image" content="https://casuarinasconsulting.com/og-image.jpg">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Casuarinas",
+  "url": "https://casuarinasconsulting.com",
+  "email": "stefanograsso44@gmail.com",
+  "sameAs": ["https://www.linkedin.com/in/stefano-grasso-/"],
+  "description": "Estrategia, gestión y producción de canales YouTube para creadores y marcas en LatAm.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios Casuarinas",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultoría puntual de canal YouTube" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proceso acompañado de estrategia YouTube" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditoría de canal YouTube" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Edición de video para YouTube" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Producción y filmmaking" } }
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* ── PALETA: dark slate + azul (limpia · seria · tecnológica) ── */
+  --bg:           #0a0e14;   /* fondo principal, casi negro azulado */
+  --surface:      #111722;   /* paneles / secciones alternas */
+  --surface-2:    #161d2b;   /* hover de cards */
+  --text:         #e6ebf2;   /* texto principal */
+  --text-dim:     #c2cdda;   /* subtítulos */
+  --muted:        #8b97a8;   /* texto secundario (contraste AA sobre --bg) */
+  --accent:       #3b82f6;   /* azul eléctrico — acento primario */
+  --accent-bright:#60a5fa;   /* azul claro — énfasis itálico */
+  --accent-deep:  #1e40af;   /* azul profundo — glows */
+  --accent-2:     #38bdf8;   /* cian — acento secundario */
+  --line:         rgba(230,235,242,.08);
+  --line-soft:    rgba(230,235,242,.05);
+  --font-serif:   'Cormorant Garamond', Georgia, serif;
+  --font-sans:    'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── ACCESIBILIDAD: foco y skip link ── */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 1000;
+  background: var(--accent); color: var(--bg);
+  padding: 10px 18px; font-size: 12px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; text-decoration: none;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ── GRAIN OVERLAY ── */
+body::after {
+  content:'';
+  position:fixed; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity:.02;
+  pointer-events:none;
+  z-index:999;
+}
+
+/* ── NAV ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:24px 64px;
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  background:rgba(10,14,20,.72);
+  border-bottom:1px solid var(--line-soft);
+  transition:border-color .4s;
+}
+.logo { font-family:var(--font-serif); font-size:21px; font-weight:600; letter-spacing:.04em; color:var(--text); text-decoration:none; }
+.logo em { font-style:italic; color:var(--accent); }
+nav ul { list-style:none; display:flex; gap:40px; }
+nav ul a { color:var(--muted); text-decoration:none; font-size:12px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; transition:color .3s; }
+nav ul a:hover { color:var(--text); }
+.nav-cta {
+  font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--accent) !important;
+  border:1px solid rgba(59,130,246,.45);
+  padding:8px 22px; border-radius:4px;
+  transition:all .3s !important;
+}
+.nav-cta:hover { background:var(--accent); color:#fff !important; }
+
+/* ── HAMBURGER ── */
+.nav-hamburger {
+  display:none;
+  flex-direction:column; justify-content:center; gap:5px;
+  background:none; border:none; cursor:pointer; padding:4px;
+}
+.nav-hamburger span {
+  display:block; width:22px; height:2px; background:var(--text); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity:0; }
+.nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+/* Mobile nav drawer */
+.nav-mobile {
+  display:none;
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(10,14,20,.97);
+  flex-direction:column; align-items:center; justify-content:center; gap:32px;
+  backdrop-filter:blur(24px);
+}
+.nav-mobile.open { display:flex; }
+.nav-mobile a {
+  color:var(--muted); text-decoration:none; font-size:15px;
+  font-weight:400; letter-spacing:.08em; text-transform:uppercase;
+  transition:color .3s;
+}
+.nav-mobile a:hover { color:var(--text); }
+.nav-mobile .nav-cta {
+  color:var(--accent) !important;
+  border:1px solid rgba(59,130,246,.45);
+  padding:12px 32px; border-radius:4px;
+}
+.nav-mobile .nav-cta:hover { background:var(--accent); color:#fff !important; }
+
+/* ── HERO ── */
+.hero {
+  min-height:100vh;
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center;
+  padding:140px 40px 100px;
+  position:relative; overflow:hidden;
+}
+
+.hero-mesh {
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 70% 55% at 20% 50%,  rgba(59,130,246,.16) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 30%,  rgba(56,189,248,.10) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 60% at 60% 85%,  rgba(30,64,175,.22) 0%, transparent 60%);
+}
+
+.hero-lines {
+  position:absolute; inset:0; pointer-events:none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(230,235,242,.014) 3px,
+    rgba(230,235,242,.014) 4px
+  );
+}
+
+.hero-eyebrow {
+  font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--accent); margin-bottom:28px;
+  opacity:0; animation:fadeUp .9s .2s forwards;
+}
+
+.hero h1 {
+  font-family:var(--font-serif);
+  font-size:clamp(52px, 8vw, 108px);
+  font-weight:500; line-height:1.0; letter-spacing:-.02em;
+  max-width:860px; margin-bottom:14px;
+  opacity:0; animation:fadeUp .9s .38s forwards;
+}
+.hero h1 em { font-style:italic; color:var(--accent-bright); }
+
+.hero-sub-title {
+  font-family:var(--font-serif);
+  font-size:clamp(18px, 2.5vw, 28px);
+  font-weight:500; font-style:italic;
+  color:var(--text-dim); margin-bottom:36px;
+  opacity:0; animation:fadeUp .9s .52s forwards;
+}
+
+.hero-desc {
+  font-size:15px; font-weight:400;
+  color:var(--muted); max-width:460px; line-height:1.75; margin-bottom:52px;
+  opacity:0; animation:fadeUp .9s .66s forwards;
+}
+
+.hero-actions {
+  display:flex; gap:16px; align-items:center;
+  opacity:0; animation:fadeUp .9s .8s forwards;
+}
+
+.btn-primary {
+  background:var(--accent); color:#fff;
+  padding:15px 38px; font-size:12px; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase;
+  border:none; border-radius:4px; cursor:pointer; text-decoration:none;
+  transition:all .3s; display:inline-block;
+  box-shadow:0 6px 24px rgba(59,130,246,.25);
+}
+.btn-primary:hover { background:var(--accent-bright); box-shadow:0 8px 30px rgba(59,130,246,.4); }
+
+.btn-ghost {
+  color:var(--muted); font-size:12px; font-weight:400; letter-spacing:.06em;
+  text-decoration:none; display:flex; align-items:center; gap:8px;
+  transition:color .3s;
+}
+.btn-ghost::after { content:'→'; transition:transform .3s; }
+.btn-ghost:hover { color:var(--text); }
+.btn-ghost:hover::after { transform:translateX(5px); }
+
+.scroll-hint {
+  position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  opacity:0; animation:fadeUp .9s 1.1s forwards;
+}
+.scroll-hint span { font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
+.scroll-line { width:1px; height:40px; background:linear-gradient(to bottom, var(--accent), transparent); animation:scrollPulse 2s 1.5s infinite; }
+
+/* ── CREDENTIAL STRIP ── */
+.cred-strip {
+  display:flex; align-items:center; justify-content:center; gap:14px;
+  padding:18px 60px;
+  border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);
+  background:rgba(59,130,246,.04);
+}
+.cred-strip-text { font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); }
+.cred-strip-name { font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--text-dim); font-weight:600; }
+.cred-dot { width:3px; height:3px; background:var(--accent); border-radius:50%; }
+
+/* ── SECTION BASE ── */
+section { padding:120px 64px; }
+.section-eyebrow { font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); margin-bottom:14px; }
+.section-title {
+  font-family:var(--font-serif); font-size:clamp(34px, 4vw, 58px);
+  font-weight:500; line-height:1.1; letter-spacing:-.01em;
+}
+
+/* ── ABOUT ── */
+.about-inner {
+  display:grid; grid-template-columns:1fr 1fr; gap:100px;
+  align-items:center; max-width:1200px; margin:0 auto;
+}
+.about-text p { color:var(--muted); font-size:15px; line-height:1.85; margin-top:20px; }
+.about-text p + p { margin-top:14px; }
+
+.about-right { display:flex; flex-direction:column; gap:1px; background:var(--line); border-radius:6px; overflow:hidden; }
+.about-stat {
+  background:var(--surface); padding:32px 36px;
+  display:flex; justify-content:space-between; align-items:flex-end;
+  transition:background .3s;
+}
+.about-stat:hover { background:var(--surface-2); }
+.stat-n {
+  font-family:var(--font-serif); font-size:46px; font-weight:500;
+  line-height:1; color:var(--text);
+}
+.stat-n sub { font-size:22px; color:var(--accent); vertical-align:baseline; }
+.stat-l { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); text-align:right; max-width:130px; line-height:1.4; }
+
+/* ── SERVICES — STRATEGY ── */
+.strategy-section { background:var(--surface); }
+.strategy-section .section-eyebrow { color:var(--accent-2); }
+
+.services-header {
+  max-width:1200px; margin:0 auto 56px;
+  display:flex; justify-content:space-between; align-items:flex-end;
+}
+.services-header-sub {
+  font-size:14px; color:var(--muted); max-width:280px;
+  line-height:1.7; text-align:right;
+}
+
+.strategy-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--line);
+  max-width:1200px; margin:0 auto;
+  border-radius:6px; overflow:hidden;
+}
+.s-card {
+  background:var(--surface); padding:48px 40px;
+  position:relative; overflow:hidden;
+  transition:background .4s;
+}
+.s-card::after {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, var(--accent), transparent);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .5s;
+}
+.s-card:hover::after { transform:scaleX(1); }
+.s-card:hover { background:var(--surface-2); }
+
+.s-num { font-family:var(--font-serif); font-size:13px; color:var(--accent); letter-spacing:.08em; margin-bottom:28px; }
+.s-card h3 { font-family:var(--font-serif); font-size:28px; font-weight:500; line-height:1.2; margin-bottom:14px; }
+.s-card p { font-size:13.5px; color:var(--muted); line-height:1.8; margin-bottom:28px; }
+.s-tags { display:flex; flex-wrap:wrap; gap:6px; }
+.tag {
+  font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+  border:1px solid var(--line); padding:5px 11px;
+  color:var(--muted); border-radius:3px;
+}
+
+/* ── SERVICES — PRODUCTION ── */
+.production-section {
+  position:relative; overflow:hidden;
+}
+.prod-bg {
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 80% 60% at 0% 50%,   rgba(30,64,175,.2)  0%, transparent 55%),
+    radial-gradient(ellipse 60% 80% at 100% 60%,  rgba(59,130,246,.12) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 50% 100%,  rgba(56,189,248,.1) 0%, transparent 50%);
+}
+
+.prod-inner { position:relative; z-index:1; max-width:1200px; margin:0 auto; }
+.prod-header { margin-bottom:56px; }
+.prod-header .section-title em { font-style:italic; color:var(--accent-bright); }
+
+.prod-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.p-card {
+  border:1px solid var(--line);
+  padding:48px 36px; border-radius:8px;
+  position:relative; overflow:hidden;
+  background:rgba(17,23,34,.5);
+  backdrop-filter:blur(12px);
+  transition:border-color .4s, transform .4s, box-shadow .4s;
+}
+.p-card:hover { border-color:rgba(59,130,246,.45); transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,.35); }
+
+.p-icon {
+  display:block; margin-bottom:24px;
+  color:var(--muted);
+  transition:color .3s;
+}
+.p-card:hover .p-icon { color:var(--accent); }
+
+.p-card h3 { font-family:var(--font-serif); font-size:26px; font-weight:500; margin-bottom:12px; }
+.p-card p { font-size:13.5px; color:var(--muted); line-height:1.8; margin-bottom:24px; }
+.p-detail { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:6px; }
+.p-detail::before { content:''; width:20px; height:1px; background:var(--accent); }
+
+/* ── PROCESS ── */
+.process-section { background:var(--surface); }
+.process-inner { max-width:1200px; margin:0 auto; }
+.process-track {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  margin-top:64px; position:relative;
+}
+.process-track::before {
+  content:''; position:absolute; top:24px; left:12.5%; right:12.5%; height:1px;
+  background:linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent));
+  opacity:.3;
+}
+.p-step { padding:0 24px; text-align:center; }
+.p-step-dot {
+  width:9px; height:9px; background:var(--accent); border-radius:50%;
+  margin:0 auto 32px; position:relative; z-index:1;
+  box-shadow:0 0 16px rgba(59,130,246,.6);
+}
+.p-step h4 { font-family:var(--font-serif); font-size:20px; font-weight:500; margin-bottom:10px; }
+.p-step p { font-size:13.5px; color:var(--muted); line-height:1.7; }
+
+/* ── CREDENTIAL BLOCK ── */
+.cred-block {
+  position:relative; overflow:hidden;
+  border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);
+}
+.cred-block-bg {
+  position:absolute; inset:0;
+  background:radial-gradient(ellipse 70% 80% at 30% 50%, rgba(59,130,246,.08) 0%, transparent 60%);
+  pointer-events:none;
+}
+.cred-block-inner {
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+  position:relative; z-index:1;
+}
+.cred-block-text h2 { font-family:var(--font-serif); font-size:clamp(30px,3.5vw,50px); font-weight:500; line-height:1.15; margin:14px 0 20px; }
+.cred-block-text p { font-size:15px; color:var(--muted); line-height:1.8; }
+
+.cred-metrics { display:flex; flex-direction:column; gap:1px; background:var(--line); border-radius:6px; overflow:hidden; }
+.c-metric {
+  background:var(--bg); padding:26px 32px;
+  display:flex; justify-content:space-between; align-items:center;
+  transition:background .3s;
+}
+.c-metric:hover { background:var(--surface); }
+.c-metric-label { font-size:12px; color:var(--muted); letter-spacing:.04em; }
+.c-metric-value { font-family:var(--font-serif); font-size:22px; color:var(--accent-2); font-weight:500; }
+
+/* ── CTA ── */
+.cta-section {
+  text-align:center; padding:140px 40px;
+  position:relative; overflow:hidden;
+}
+.cta-bg {
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(59,130,246,.12) 0%, transparent 65%),
+    radial-gradient(ellipse 30% 30% at 30% 20%, rgba(56,189,248,.07) 0%, transparent 50%);
+}
+.cta-section h2 {
+  font-family:var(--font-serif); font-size:clamp(40px,6vw,80px);
+  font-weight:500; line-height:1.08; letter-spacing:-.02em;
+  max-width:720px; margin:0 auto 24px; position:relative;
+}
+.cta-section h2 em { font-style:italic; color:var(--accent-bright); }
+.cta-section p {
+  color:var(--muted); font-size:15px; margin-bottom:48px;
+  max-width:420px; margin-left:auto; margin-right:auto; line-height:1.7;
+  position:relative;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding:36px 64px;
+  border-top:1px solid var(--line-soft);
+  display:flex; justify-content:space-between; align-items:center;
+}
+footer .logo { font-size:17px; }
+.footer-copy { font-size:11px; color:var(--muted); letter-spacing:.04em; }
+.footer-links { display:flex; gap:32px; }
+.footer-links a { font-size:11px; color:var(--muted); text-decoration:none; letter-spacing:.08em; text-transform:uppercase; transition:color .3s; }
+.footer-links a:hover { color:var(--text); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(22px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes scrollPulse {
+  0%,100% { opacity:.3; } 50% { opacity:1; }
+}
+
+/* Reveal solo cuando hay JS — sin JS el contenido es visible por defecto */
+html.js .reveal { opacity:0; transform:translateY(28px); transition:opacity .85s ease, transform .85s ease; }
+html.js .reveal.in { opacity:1; transform:translateY(0); }
+.reveal-delay-1 { transition-delay:.1s; }
+.reveal-delay-2 { transition-delay:.2s; }
+.reveal-delay-3 { transition-delay:.3s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  nav { padding:18px 24px; }
+  nav ul { display:none; }
+  .nav-hamburger { display:flex; }
+  section { padding:80px 24px; }
+  .about-inner { grid-template-columns:1fr; gap:48px; }
+  .strategy-grid, .prod-grid { grid-template-columns:1fr; }
+  .services-header { flex-direction:column; align-items:flex-start; gap:12px; }
+  .services-header-sub { text-align:left; }
+  .process-track {
+    grid-template-columns:1fr;
+    padding-left:32px;
+  }
+  .process-track::before {
+    top:12px; bottom:12px; left:4px; right:auto;
+    width:1px; height:auto;
+    background:linear-gradient(to bottom, var(--accent), var(--accent-2), var(--accent));
+  }
+  .p-step { text-align:left; padding:0 0 40px 28px; position:relative; }
+  .p-step-dot { margin:0; position:absolute; left:-28px; top:4px; }
+  .cred-block-inner { grid-template-columns:1fr; gap:48px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .cred-strip { flex-wrap:wrap; padding:18px 24px; text-align:center; gap:10px; }
+}
+</style>
+</head>
+<body>
+
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">Casuarinas</a>
+  <ul>
+    <li><a href="#estrategia">Estrategia</a></li>
+    <li><a href="#produccion">Producción</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto" class="nav-cta">Agendar llamada</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menú de navegación">
+  <a href="#estrategia" class="nav-mobile-link">Estrategia</a>
+  <a href="#produccion" class="nav-mobile-link">Producción</a>
+  <a href="#nosotros" class="nav-mobile-link">Nosotros</a>
+  <a href="#contacto" class="nav-cta nav-mobile-link">Agendar llamada</a>
+</div>
+
+<!-- HERO -->
+<main id="contenido">
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-lines"></div>
+  <p class="hero-eyebrow">Gestión de canales YouTube · Estrategia · Producción</p>
+  <h1>Tu canal de YouTube<br><em>gestionado desde adentro</em></h1>
+  <p class="hero-sub-title">No somos una agencia. Somos operadores.</p>
+  <p class="hero-desc">Gestionamos canales de YouTube con estrategia, producción y equipo. Consultoría y producción de video para creadores y marcas en LatAm.</p>
+  <div class="hero-actions">
+    <a href="#contacto" class="btn-primary">Agendar llamada</a>
+    <a href="#estrategia" class="btn-ghost">Ver servicios</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- CRED STRIP -->
+<div class="cred-strip">
+  <span class="cred-strip-text">Entre nuestros clientes</span>
+  <div class="cred-dot"></div>
+  <span class="cred-strip-name">Canal Dr. La Rosa</span>
+  <div class="cred-dot"></div>
+  <span class="cred-strip-text">Medicina · Divulgación científica</span>
+</div>
+
+<!-- ABOUT -->
+<section id="nosotros">
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <p class="section-eyebrow">Quiénes somos</p>
+      <h2 class="section-title">Adentro del<br>canal, no afuera</h2>
+      <p>La diferencia entre Casuarinas y cualquier otra consultora es simple: gestionamos canales reales en producción activa. Conocemos los errores que penalizan un canal porque los detectamos, los corregimos y los medimos.</p>
+      <p>Desde estrategia de contenido hasta el equipo técnico de grabación. Todo bajo un mismo techo.</p>
+    </div>
+    <div class="about-right reveal reveal-delay-1">
+      <div class="about-stat">
+        <div class="stat-n">+3<sub>M</sub></div>
+        <div class="stat-l">Vistas gestionadas</div>
+      </div>
+      <div class="about-stat">
+        <div class="stat-n">2024</div>
+        <div class="stat-l">Gestión activa en curso</div>
+      </div>
+      <div class="about-stat">
+        <div class="stat-n">01</div>
+        <div class="stat-l">Canal activo propio</div>
+      </div>
+      <div class="about-stat">
+        <div class="stat-n">100<sub>%</sub></div>
+        <div class="stat-l">Basado en gestión real</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY SERVICES -->
+<section id="estrategia" class="strategy-section">
+  <div class="services-header reveal">
+    <div>
+      <p class="section-eyebrow">Pilar 01 — Estrategia</p>
+      <h2 class="section-title">YouTube que<br>rinde métricas</h2>
+    </div>
+    <p class="services-header-sub">Diagnóstico, estrategia de contenido y acompañamiento para que tu canal crezca con intención.</p>
+  </div>
+  <div class="strategy-grid">
+    <div class="s-card reveal">
+      <div class="s-num">01 — Consultoría puntual</div>
+      <h3>Una sesión,<br>un plan</h3>
+      <p>Analizamos tu canal en una sesión de trabajo enfocada. Diagnóstico + plan de acción concreto.</p>
+      <div class="s-tags"><span class="tag">1 sesión</span><span class="tag">Diagnóstico</span><span class="tag">Plan de acción</span></div>
+    </div>
+    <div class="s-card reveal reveal-delay-1">
+      <div class="s-num">02 — Proceso acompañado</div>
+      <h3>Tu equipo,<br>ampliado</h3>
+      <p>Trabajamos junto a tu equipo durante un período definido. Estrategia, métricas, thumbnails, títulos — en tiempo real.</p>
+      <div class="s-tags"><span class="tag">Mensual</span><span class="tag">Estrategia</span><span class="tag">Métricas</span></div>
+    </div>
+    <div class="s-card reveal reveal-delay-2">
+      <div class="s-num">03 — Auditoría de canal</div>
+      <h3>Todo lo que<br>está frenando</h3>
+      <p>Revisión exhaustiva: CTR, retención, penalizaciones, thumbnails, títulos. Informe con prioridades y quick wins.</p>
+      <div class="s-tags"><span class="tag">Informe</span><span class="tag">CTR</span><span class="tag">Quick wins</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTION SERVICES -->
+<section id="produccion" class="production-section">
+  <div class="prod-bg"></div>
+  <div class="prod-inner">
+    <div class="prod-header reveal">
+      <p class="section-eyebrow">Pilar 02 — Producción</p>
+      <h2 class="section-title">Del guion a la<br><em>pantalla final</em></h2>
+    </div>
+    <div class="prod-grid">
+      <div class="p-card reveal">
+        <span class="p-icon" role="img" aria-label="Edición de video">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M17 3v18M3 12h18M3 7.5h4M17 7.5h4M3 16.5h4M17 16.5h4"/></svg>
+        </span>
+        <h3>Edición<br>de video</h3>
+        <p>Edición profesional orientada a retención: cortes, ritmo, gráficos, motion. El video que el algoritmo quiere ver.</p>
+        <span class="p-detail">Por entrega o paquete mensual</span>
+      </div>
+      <div class="p-card reveal reveal-delay-1">
+        <span class="p-icon" role="img" aria-label="Equipo técnico de grabación">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 8l-6 4 6 4V8z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+        </span>
+        <h3>Equipo técnico<br>de grabación</h3>
+        <p>Contratación y coordinación de equipo de cámara e iluminación para tus sesiones de grabación.</p>
+        <span class="p-detail">Por sesión o proyecto</span>
+      </div>
+      <div class="p-card reveal reveal-delay-2">
+        <span class="p-icon" role="img" aria-label="Filmmaking">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3l2-3h6l2 3h3a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </span>
+        <h3>Filmmaking<br>por hora</h3>
+        <p>Dirección y operación de cámara para contenido de alta producción. Desde entrevistas hasta piezas de marca.</p>
+        <span class="p-detail">Tarifa por hora / media jornada</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="process-inner">
+    <div class="reveal">
+      <p class="section-eyebrow">Cómo trabajamos</p>
+      <h2 class="section-title">Cuatro pasos</h2>
+    </div>
+    <div class="process-track">
+      <div class="p-step reveal">
+        <div class="p-step-dot"></div>
+        <h4>Llamada inicial</h4>
+        <p>Entendemos tu canal y tu objetivo. Sin costo. Sin compromiso.</p>
+      </div>
+      <div class="p-step reveal reveal-delay-1">
+        <div class="p-step-dot"></div>
+        <h4>Diagnóstico</h4>
+        <p>Analizamos el estado real del canal: métricas, errores, oportunidades.</p>
+      </div>
+      <div class="p-step reveal reveal-delay-2">
+        <div class="p-step-dot"></div>
+        <h4>Propuesta</h4>
+        <p>Definimos qué servicio tiene sentido para vos.</p>
+      </div>
+      <div class="p-step reveal reveal-delay-3">
+        <div class="p-step-dot"></div>
+        <h4>Ejecución</h4>
+        <p>Trabajamos, medimos, ajustamos. Reportamos con datos reales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIAL BLOCK -->
+<section class="cred-block">
+  <div class="cred-block-bg"></div>
+  <div class="cred-block-inner reveal">
+    <div class="cred-block-text">
+      <p class="section-eyebrow">Credencial</p>
+      <h2>Lo que enseñamos,<br>ya lo vivimos</h2>
+      <p>Gestionamos activamente el canal Dr. La Rosa — referente de medicina y divulgación científica en YouTube hispanohablante. Ese contexto no se aprende en un curso.</p>
+    </div>
+    <div class="cred-metrics">
+      <div class="c-metric">
+        <span class="c-metric-label">Canal gestionado</span>
+        <span class="c-metric-value">Dr. La Rosa</span>
+      </div>
+      <div class="c-metric">
+        <span class="c-metric-label">Nicho</span>
+        <span class="c-metric-value">Salud & Ciencia</span>
+      </div>
+      <div class="c-metric">
+        <span class="c-metric-label">Gestión</span>
+        <span class="c-metric-value">Activa · 2024–</span>
+      </div>
+      <div class="c-metric">
+        <span class="c-metric-label">Plataforma</span>
+        <span class="c-metric-value">YouTube</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contacto" class="cta-section">
+  <div class="cta-bg"></div>
+  <h2 class="reveal">Tu canal puede<br>rendir <em>más</em></h2>
+  <p class="reveal reveal-delay-1">Primera llamada sin cargo. Escribinos y coordinamos una conversación honesta sobre lo que podemos hacer juntos.</p>
+  <div class="reveal reveal-delay-2">
+    <a href="mailto:stefanograsso44@gmail.com?subject=Quiero%20agendar%20una%20llamada%20%E2%80%94%20Casuarinas&body=Hola%20Casuarinas%2C%20me%20gustar%C3%ADa%20agendar%20una%20llamada%20para%20hablar%20de%20mi%20canal." class="btn-primary">Agendar llamada</a>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="logo">Casuarinas</a>
+  <span class="footer-copy">© 2026 Casuarinas</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/stefano-grasso-/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="mailto:stefanograsso44@gmail.com">Contacto</a>
+  </div>
+</footer>
+
+<script>
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navMobile = document.getElementById('nav-mobile');
+hamburger.addEventListener('click', () => {
+  const isOpen = navMobile.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+document.querySelectorAll('.nav-mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navMobile.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Nav border on scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').style.borderBottomColor =
+    scrollY > 60 ? 'rgba(230,235,242,.12)' : 'rgba(230,235,242,.05)';
+});
+</script>
+</body>
+</html>
